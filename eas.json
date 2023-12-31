@@ -1,0 +1,33 @@
+{
+  "cli": {
+    "version": ">= 2.7.0",
+    "appVersionSource": "remote",
+    "promptToConfigurePushNotifications": false
+  },
+  "build": {
+    "development": {
+      "developmentClient": false,
+      "distribution": "internal"
+    },
+    "beta": {
+      "distribution": "internal",
+      "channel": "beta",
+      "android": {
+        "buildType": "apk"
+      },
+      "env": {
+        "EXPO_PUBLIC_BACKEND_HOST": "https://amesride.demerstech.com"
+      }
+    },
+    "production": {
+      "channel": "production",
+      "autoIncrement": true,
+      "env": {
+        "EXPO_PUBLIC_BACKEND_HOST": "https://amesride.demerstech.com"
+      }
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}
